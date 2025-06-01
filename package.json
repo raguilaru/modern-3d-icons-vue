@@ -1,19 +1,39 @@
 {
   "name": "modern-3d-icons-vue",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Vue 3 library for modern 3D SVG icons",
   "main": "dist/modern-3d-icons-vue.umd.js",
   "module": "dist/modern-3d-icons-vue.es.js",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "type-check": "vue-tsc --noEmit"
+    "type-check": "vue-tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "vue",
+    "vue3",
+    "icons",
+    "svg",
+    "3d",
+    "components"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/modern-3d-icons-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/modern-3d-icons-vue/issues"
+  },
+  "homepage": "https://github.com/yourusername/modern-3d-icons-vue#readme",
   "peerDependencies": {
     "vue": "^3.3.0"
   },
