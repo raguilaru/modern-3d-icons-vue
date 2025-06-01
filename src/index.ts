@@ -1,6 +1,4 @@
 import BaseIcon from './components/BaseIcon.vue'
-// import HomeIcon from './components/icons/HomeIcon.vue'
-// import SettingsIcon from './components/icons/SettingsIcon.vue'
 import DigitalQuaverIcon from './components/icons/DigitalQuaverIcon.vue'
 import PlayButtonIcon from './components/icons/PlayButtonIcon.vue'
 import MagnifyingGlassIcon from './components/icons/MagnifyingGlassIcon.vue'
@@ -8,7 +6,7 @@ import SpeakerIcon from './components/icons/SpeakerIcon.vue'
 import AiChipIcon from './components/icons/AiChipIcon.vue'
 import FootballIcon from './components/icons/FootballIcon.vue'
 import WalletIcon from './components/icons/WalletIcon.vue'
-// import RocketIcon from './components/icons/RocketIcon.vue'
+import RocketIcon from './components/icons/RocketIcon.vue'
 import CupIcon from './components/icons/CupIcon.vue'
 import HouseIcon from './components/icons/HouseIcon.vue'
 import AirplaneIcon from './components/icons/AirplaneIcon.vue'
@@ -69,7 +67,7 @@ const components = {
   AiChipIcon,
   FootballIcon,
   WalletIcon,
-  // RocketIcon,
+  RocketIcon,
   CupIcon,
   HouseIcon,
   AirplaneIcon,
@@ -122,8 +120,6 @@ const components = {
 
 export {
   BaseIcon,
-  // HomeIcon,
-  // SettingsIcon,
   DigitalQuaverIcon,
   PlayButtonIcon,
   MagnifyingGlassIcon,
@@ -131,7 +127,7 @@ export {
   AiChipIcon,
   FootballIcon,
   WalletIcon,
-  // RocketIcon,
+  RocketIcon,
   CupIcon,
   HouseIcon,
   AirplaneIcon,
