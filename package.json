@@ -28,12 +28,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/modern-3d-icons-vue.git"
+    "url": "git+https://github.com/raguilaru/modern-3d-icons-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/modern-3d-icons-vue/issues"
+    "url": "https://github.com/raguilaru/modern-3d-icons-vue/issues"
   },
-  "homepage": "https://github.com/yourusername/modern-3d-icons-vue#readme",
+  "homepage": "https://github.com/raguilaru/modern-3d-icons-vue#readme",
   "peerDependencies": {
     "vue": "^3.3.0"
   },
