@@ -1,5 +1,5 @@
 <template>
-  <BaseIcon v-bind="props" src="/src/svg/shipping-box-with-handling-symbols.svg" />
+  <BaseIcon v-bind="props" src="/src/svg/box-icon-in-minimalist-style.svg" />
 </template>
 
 <script setup lang="ts">

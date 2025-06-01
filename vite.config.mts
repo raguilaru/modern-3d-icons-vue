@@ -1,0 +1,73 @@
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import dts from 'vite-plugin-dts'
+import { resolve } from 'path'
+
+export default defineConfig({
+  plugins: [
+    vue({
+      script: {
+        defineModel: true,
+        propsDestructure: true
+      }
+    }),
+    dts({
+      include: ['src/**/*.vue', 'src/**/*.ts'],
+      beforeWriteFile: (filePath, content) => ({
+        filePath: filePath.replace(/src\//, ''),
+        content
+      })
+    })
+  ],
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'Modern3DIconsVue',
+      fileName: (format) => `modern-3d-icons-vue.${format}.js`,
+      formats: ['es', 'umd']
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        exports: 'named',
+        globals: {
+          vue: 'Vue'
+        },
+        assetFileNames: (assetInfo) => {
+          return assetInfo.name === 'style.css' ? 'modern-3d-icons-vue.css' : assetInfo.name || 'asset'
+        }
+      }
+    },
+    target: 'esnext',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2
+      },
+      format: {
+        comments: false
+      }
+    },
+    sourcemap: true,
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    modulePreload: {
+      polyfill: true
+    }
+  },
+  optimizeDeps: {
+    include: ['vue'],
+    exclude: []
+  },
+  assetsInclude: ['**/*.svg'],
+  server: {
+    hmr: {
+      overlay: true
+    }
+  },
+  publicDir: 'src/svg'
+}) 

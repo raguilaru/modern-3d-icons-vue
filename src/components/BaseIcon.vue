@@ -5,14 +5,12 @@
     :viewBox="props.viewBox"
     :fill="props.color"
     xmlns="http://www.w3.org/2000/svg"
-    v-bind="$attrs"
     v-html="svgContent"
   />
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useAttrs } from '@vue/runtime-core'
 
 interface Props {
   size?: number | string
@@ -23,7 +21,6 @@ interface Props {
 
 const props = defineProps<Props>()
 const svgContent = ref('')
-const $attrs = useAttrs()
 
 onMounted(async () => {
   try {
