@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="commercial-airplane-icon-in-white.png"
+    :size="size"
+    alt="Airplane Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/commercial-airplane-icon-in-white.svg" />
-</template> 

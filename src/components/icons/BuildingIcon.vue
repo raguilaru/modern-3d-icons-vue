@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="neoclassical-beige-building-rendering.png"
+    :size="size"
+    alt="Building Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/neoclassical-beige-building-rendering.svg" />
-</template> 

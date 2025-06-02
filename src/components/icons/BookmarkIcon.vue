@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="minimalist-bookmark-icon-rendering.png"
+    :size="size"
+    alt="Bookmark Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/minimalist-bookmark-icon-rendering.svg" />
-</template> 

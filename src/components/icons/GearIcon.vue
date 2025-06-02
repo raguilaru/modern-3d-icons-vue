@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="minimalist-gear-icon-design.png"
+    :size="size"
+    alt="Gear Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/minimalist-gear-icon-design.svg" />
-</template> 

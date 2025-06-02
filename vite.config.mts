@@ -19,6 +19,12 @@ export default defineConfig({
       })
     })
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@assets': resolve(__dirname, './src/assets')
+    }
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
@@ -34,7 +40,11 @@ export default defineConfig({
           vue: 'Vue'
         },
         assetFileNames: (assetInfo) => {
-          return assetInfo.name === 'style.css' ? 'modern-3d-icons-vue.css' : assetInfo.name || 'asset'
+          if (assetInfo.name === 'style.css') return 'modern-3d-icons-vue.css'
+          if (assetInfo.name?.includes('assets/')) {
+            return 'assets/[name][extname]'
+          }
+          return assetInfo.name || 'asset'
         }
       }
     },
@@ -63,11 +73,11 @@ export default defineConfig({
     include: ['vue'],
     exclude: []
   },
-  assetsInclude: ['**/*.svg'],
+  assetsInclude: ['**/*.svg', '**/*.png'],
   server: {
     hmr: {
       overlay: true
     }
   },
-  publicDir: 'src/svg'
+  publicDir: 'public'
 }) 

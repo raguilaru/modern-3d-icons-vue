@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="yellow-lightning-bolt-icon.png"
+    :size="size"
+    alt="Lightning Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/lightning-icon-in-minimalist-style.svg" />
-</template> 

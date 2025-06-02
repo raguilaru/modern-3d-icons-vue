@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="raised-thumbs-up-with-blue-cuff.png"
+    :size="size"
+    alt="ThumbsUp Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/thumbs-up-icon-in-minimalist-style.svg" />
-</template> 

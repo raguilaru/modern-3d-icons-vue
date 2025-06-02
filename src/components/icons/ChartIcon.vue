@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="rising-bar-chart-with-red-arrow.png"
+    :size="size"
+    alt="Chart Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/chart-icon-in-minimalist-style.svg" />
-</template> 

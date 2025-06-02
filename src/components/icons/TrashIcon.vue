@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="minimalist-trash-can-icon.png"
+    :size="size"
+    alt="Trash Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/minimalist-trash-can-icon.svg" />
-</template> 

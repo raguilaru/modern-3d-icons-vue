@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="textured-speech-bubble-with-dots.png"
+    :size="size"
+    alt="SpeechBubble Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/speech-bubble-icon-in-minimalist-style.svg" />
-</template> 

@@ -1,6 +1,16 @@
 # Modern 3D Icons Vue
 
-A Vue 3 library featuring modern 3D SVG icons with customizable properties.
+A Vue 3 library featuring modern 3D PNG icons with responsive sizing and high-quality assets.
+
+## Features
+
+- 🎨 High-quality 3D PNG icons
+- 📱 Responsive sizing with automatic resolution selection
+- 🎯 TypeScript support
+- 🚀 Vue 3 composition API
+- 📦 Tree-shakeable imports
+- ♿ Accessibility support with alt text
+- 🎯 Zero dependencies
 
 ## Installation
 
@@ -55,12 +65,19 @@ All icons accept the following props:
 ```vue
 <template>
   <AiChipIcon
-    size="24"           <!-- Size in pixels (number or string) -->
-    color="#FF0000"     <!-- Color (any valid CSS color) -->
-    viewBox="0 0 24 24" <!-- SVG viewBox (optional) -->
+    :size="32"         <!-- Size in pixels (default: 32) -->
+    alt="AI Chip"      <!-- Alt text for accessibility -->
   />
 </template>
 ```
+
+### Responsive Sizing
+
+The icons automatically use the appropriate resolution based on their size:
+- ≤ 64px: Uses 64x64 PNG
+- 65-128px: Uses 128x128 PNG
+- 129-256px: Uses 256x256 PNG
+- > 256px: Uses original high-resolution PNG
 
 ### Available Icons
 
@@ -76,21 +93,46 @@ All icons accept the following props:
 - `SpeakerIcon` - 3D speaker with sound waves
 - `WalletIcon` - Beige wallet with blue banknote
 
-### Additional SVG Attributes
+### Additional Image Attributes
 
-You can pass any valid SVG attributes to the icons:
+You can pass any valid image attributes to the icons:
 
 ```vue
 <template>
   <AiChipIcon
     class="my-icon"
     style="opacity: 0.8"
-    aria-label="AI Chip"
+    alt="AI Chip"
   />
 </template>
 ```
 
+## Project Structure
+
+```
+modern-3d-icons-vue/
+├── src/
+│   ├── assets/
+│   │   └── png/           # Icon assets in different resolutions
+│   │       ├── 64/        # 64x64 icons
+│   │       ├── 128/       # 128x128 icons
+│   │       ├── 256/       # 256x256 icons
+│   │       └── original/  # Original high-res icons
+│   ├── components/        # Vue components
+│   └── index.ts          # Main entry point
+├── example-app/          # Example application
+├── dist/                 # Build output
+└── package.json
+```
+
 ## Development
+
+### Prerequisites
+
+- Node.js 16+
+- npm 7+ or yarn 1.22+ or pnpm 7+
+
+### Setup
 
 ```bash
 # Install dependencies
@@ -106,6 +148,38 @@ npm run build
 npm run type-check
 ```
 
+### Example App
+
+The project includes an example application to showcase the icons:
+
+```bash
+cd example-app
+npm install
+npm run dev
+```
+
+### Adding New Icons
+
+1. Add your PNG icons to the appropriate resolution folders in `src/assets/png/`
+2. Create a new component in `src/components/`
+3. Export the component in `src/index.ts`
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-icon`)
+3. Commit your changes (`git commit -m 'Add amazing icon'`)
+4. Push to the branch (`git push origin feature/amazing-icon`)
+5. Open a Pull Request
+
+### Icon Guidelines
+
+- Icons should be in PNG format
+- Provide icons in all required resolutions (64x64, 128x128, 256x256, and original)
+- Maintain consistent style across all icons
+- Ensure icons are properly centered and padded
+- Use transparent backgrounds
+
 ## License
 
-MIT 
+MIT © [Rafael Aguilar](https://github.com/raguilaru) 

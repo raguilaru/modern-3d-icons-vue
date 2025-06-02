@@ -1,8 +1,15 @@
 <template>
-  <BaseIcon v-bind="props" src="/src/svg/3d-speaker-icon-with-sound-waves.svg" />
+  <BaseIcon
+    src="3d-speaker-icon-with-sound-waves.png"
+    :size="size"
+    alt="Speaker Icon"
+  />
 </template>
 
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
-</script> 
+
+defineProps<{
+  size?: number
+}>()
+</script>

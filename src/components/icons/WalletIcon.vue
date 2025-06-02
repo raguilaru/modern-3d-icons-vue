@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="beige-wallet-with-blue-banknote.png"
+    :size="size"
+    alt="Wallet Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/beige-wallet-with-blue-banknote.svg" />
-</template> 

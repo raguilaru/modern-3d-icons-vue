@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="matte-gray-wrench-on-white-background.png"
+    :size="size"
+    alt="Wrench Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/matte-gray-wrench-on-white-background.svg" />
-</template> 

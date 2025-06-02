@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="minimalist-folder-with-user-icon.png"
+    :size="size"
+    alt="Folder Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/minimalist-folder-with-user-icon.svg" />
-</template> 

@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="textured-globe-with-latitude-and-longitude.png"
+    :size="size"
+    alt="Globe Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/globe-icon-in-minimalist-style.svg" />
-</template> 

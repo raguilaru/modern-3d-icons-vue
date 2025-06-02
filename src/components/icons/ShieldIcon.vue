@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="shield-and-padlock-icon-design.png"
+    :size="size"
+    alt="Shield Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/shield-icon-in-minimalist-style.svg" />
-</template> 

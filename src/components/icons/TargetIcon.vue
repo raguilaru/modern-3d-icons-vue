@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="perfect-shot-on-target.png"
+    :size="size"
+    alt="Target Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/perfect-shot-on-target.svg" />
-</template> 

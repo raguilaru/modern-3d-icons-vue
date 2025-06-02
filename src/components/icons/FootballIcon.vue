@@ -1,8 +1,15 @@
 <template>
-  <BaseIcon v-bind="props" src="/src/svg/american-football-close-up.svg" />
+  <BaseIcon
+    src="american-football-close-up.png"
+    :size="size"
+    alt="Football Icon"
+  />
 </template>
 
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
-</script> 
+
+defineProps<{
+  size?: number
+}>()
+</script>

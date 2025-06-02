@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="3d-magnifying-glass-icon.png"
+    :size="size"
+    alt="MagnifyingGlass Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/3d-magnifying-glass-icon.svg" />
-</template> 

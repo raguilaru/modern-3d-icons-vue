@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="envelope-with-red-badge.png"
+    :size="size"
+    alt="Envelope Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/envelope-with-red-badge.svg" />
-</template> 

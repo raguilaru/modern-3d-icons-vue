@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="stylish-yellow-and-gray-headphones.png"
+    :size="size"
+    alt="Headphones Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/headphones-icon-in-minimalist-style.svg" />
-</template> 

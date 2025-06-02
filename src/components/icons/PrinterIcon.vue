@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="tabletop-printer-icon-3d-rendering.png"
+    :size="size"
+    alt="Printer Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/printer-icon-in-minimalist-style.svg" />
-</template> 

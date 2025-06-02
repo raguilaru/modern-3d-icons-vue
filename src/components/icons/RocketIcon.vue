@@ -1,7 +1,15 @@
 <template>
-  <BaseIcon :src="'/src/svg/cartoon-rocket-launching-to-space.svg'" />
+  <BaseIcon
+    src="cartoon-rocket-launching-to-space.png"
+    :size="size"
+    alt="Rocket Icon"
+  />
 </template>
 
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-</script> 
+
+defineProps<{
+  size?: number
+}>()
+</script>

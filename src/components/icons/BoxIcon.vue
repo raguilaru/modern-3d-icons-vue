@@ -1,8 +1,15 @@
 <template>
-  <BaseIcon v-bind="props" src="/src/svg/box-icon-in-minimalist-style.svg" />
+  <BaseIcon
+    src="shipping-box-with-handling-symbols.png"
+    :size="size"
+    alt="Box Icon"
+  />
 </template>
 
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
-</script> 
+
+defineProps<{
+  size?: number
+}>()
+</script>

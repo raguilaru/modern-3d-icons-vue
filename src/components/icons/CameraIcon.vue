@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="digital-camera-icon-in-matte-gray.png"
+    :size="size"
+    alt="Camera Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/digital-camera-icon-in-matte-gray.svg" />
-</template> 

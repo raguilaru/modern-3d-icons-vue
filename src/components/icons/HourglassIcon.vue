@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="timeless-flow-of-golden-sands.png"
+    :size="size"
+    alt="Hourglass Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/hourglass-icon-in-minimalist-style.svg" />
-</template> 

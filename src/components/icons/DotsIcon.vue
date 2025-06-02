@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="minimalist-grey-dots-on-white.png"
+    :size="size"
+    alt="Dots Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/minimalist-grey-dots-on-white.svg" />
-</template> 

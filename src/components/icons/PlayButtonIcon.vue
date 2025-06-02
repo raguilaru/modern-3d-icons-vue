@@ -1,8 +1,15 @@
 <template>
-  <BaseIcon v-bind="props" src="/src/svg/play-button.svg" />
+  <BaseIcon
+    src="3d-gray-play-button-icon.png"
+    :size="size"
+    alt="PlayButton Icon"
+  />
 </template>
 
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
-</script> 
+
+defineProps<{
+  size?: number
+}>()
+</script>

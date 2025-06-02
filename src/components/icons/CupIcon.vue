@@ -1,7 +1,15 @@
+<template>
+  <BaseIcon
+    src="ceramic-cup-with-warm-liquid.png"
+    :size="size"
+    alt="Cup Icon"
+  />
+</template>
+
 <script setup lang="ts">
 import BaseIcon from '../BaseIcon.vue'
-const props = defineProps()
+
+defineProps<{
+  size?: number
+}>()
 </script>
-<template>
-  <BaseIcon v-bind="props" src="/src/svg/ceramic-cup-with-warm-liquid.svg" />
-</template> 
