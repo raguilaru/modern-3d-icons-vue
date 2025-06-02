@@ -10,3 +10,6 @@ node_modules/
 
 # Build files that shouldn't be included
 *.tsbuildinfo 
+
+# Example app
+example-app/ 
