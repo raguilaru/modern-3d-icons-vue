@@ -7,19 +7,19 @@ import { RocketIcon, StarIcon, LightBulbIcon, GlobeIcon, ComputerIcon, Headphone
     <h1>Modern 3D Icons Showcase</h1>
     <div class="icon-grid">
       <div class="icon-item">
-        <RocketIcon :size="64" />
+        <RocketIcon :size="32" />
         <span>Rocket</span>
       </div>
       <div class="icon-item">
-        <StarIcon />
+        <StarIcon :size="64" />
         <span>Star</span>
       </div>
       <div class="icon-item">
-        <LightBulbIcon />
+        <LightBulbIcon :size="128" />
         <span>Light Bulb</span>
       </div>
       <div class="icon-item">
-        <GlobeIcon />
+        <GlobeIcon :size="256" />
         <span>Globe</span>
       </div>
       <div class="icon-item">
