@@ -1,6 +1,6 @@
 {
   "name": "modern-3d-icons-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Vue 3 library for modern 3D SVG icons",
   "type": "module",
   "main": "dist/modern-3d-icons-vue.umd.js",
