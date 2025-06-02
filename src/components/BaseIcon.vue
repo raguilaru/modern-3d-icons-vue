@@ -21,6 +21,6 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const getImageSrc = (size: number, src: string) => {  
-  return new URL(`/src/assets/png/${size <= 64 ? '64' : size <= 128 ? '128' : size <= 256 ? '256' : 'original'}/${src}`, import.meta.url).href
+  return new URL(`/src/assets/png/${size <= 64 ? '64' : size <= 128 ? '128' : '256'}/${src}`, import.meta.url).href
 }
 </script> 

@@ -76,8 +76,7 @@ All icons accept the following props:
 The icons automatically use the appropriate resolution based on their size:
 - ≤ 64px: Uses 64x64 PNG
 - 65-128px: Uses 128x128 PNG
-- 129-256px: Uses 256x256 PNG
-- > 256px: Uses original high-resolution PNG
+- > 128px: Uses 256x256 PNG
 
 ### Available Icons
 
@@ -116,8 +115,7 @@ modern-3d-icons-vue/
 │   │   └── png/           # Icon assets in different resolutions
 │   │       ├── 64/        # 64x64 icons
 │   │       ├── 128/       # 128x128 icons
-│   │       ├── 256/       # 256x256 icons
-│   │       └── original/  # Original high-res icons
+│   │       └── 256/       # 256x256 icons
 │   ├── components/        # Vue components
 │   └── index.ts          # Main entry point
 ├── example-app/          # Example application
@@ -175,7 +173,7 @@ npm run dev
 ### Icon Guidelines
 
 - Icons should be in PNG format
-- Provide icons in all required resolutions (64x64, 128x128, 256x256, and original)
+- Provide icons in all required resolutions (64x64, 128x128, and 256x256)
 - Maintain consistent style across all icons
 - Ensure icons are properly centered and padded
 - Use transparent backgrounds
