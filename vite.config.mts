@@ -61,7 +61,7 @@ export default defineConfig({
         comments: false
       }
     },
-    sourcemap: true,
+    sourcemap: false,
     chunkSizeWarningLimit: 1000,
     assetsInlineLimit: 4096,
     cssCodeSplit: true,

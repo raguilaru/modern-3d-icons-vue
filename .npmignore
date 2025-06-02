@@ -1,0 +1,12 @@
+# Source maps
+*.map
+
+# Development files
+.vscode/
+.idea/
+*.log
+node_modules/
+.DS_Store
+
+# Build files that shouldn't be included
+*.tsbuildinfo 
